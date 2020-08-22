@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//하노이 탑 구현
 void hanoi(int n, int from, int to, int by) {
 
 	if (!n)
@@ -22,7 +23,8 @@ int main() {
 	cin >> N;
 
 	int cnt = 1;
-
+	
+	//원판의 이동 횟수
 	for (int i = 0; i < N; i++) {
 		cnt *= 2;
 	}
