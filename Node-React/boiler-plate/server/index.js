@@ -1,5 +1,5 @@
 const express = require('express')
-const {User} = require("./models/User")
+const {User} = require('./models/User')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const config = require('./config/key')
@@ -24,6 +24,10 @@ mongoose.connect(config.mongoURI,{
 
 app.get('/',(req,res)=>res.send('새해복 많이 받으세요!!!'))
 
+app.get('/api/hello', (req,res)=>{
+
+    res.send("안녕하세요~");
+});
 
 //***********************회원가입을 위한 router***********************
 app.post('/api/users/register',(req,res)=>{
