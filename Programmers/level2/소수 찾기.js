@@ -6,21 +6,17 @@ function solution(numbers) {
     //소수 판별 함수
     const checkPrime = (num)=>{
         let cnt = 0;
-        if(num<=1 || num===2)
-            cnt = 0;
-        
-        for(let i=2; i<=Math.sqrt(num); i++){
+        for(let i=1; i<=num; i++){
             if(num%i===0){
                 cnt++;
+            
             }
-            if(cnt!==0){
+            if(cnt>=3)
                 break;
-            }
         }
-        if(cnt!==0 && !primenumbers.includes(num)){
+        if(cnt===2 && !primenumbers.includes(num)){
             primenumbers.push(num);
         }
-
     }
     
     //주어진 숫자들로 새로운 조합 만드는 함수
